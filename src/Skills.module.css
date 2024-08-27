@@ -1,0 +1,9 @@
+.text{
+    padding: 30px;
+}
+.skills{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

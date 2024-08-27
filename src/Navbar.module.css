@@ -1,0 +1,38 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 20vh;
+}
+.logoContainer{
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.image{
+    max-height: 19vh;
+    width: auto;
+}
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    flex-grow: 1;
+}
+.nav-links button{
+    text-decoration: none;
+    border: 0;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    height: 35px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+.nav-links button:hover{
+    background-color: #f3eeee;
+    padding: 5px;
+}
