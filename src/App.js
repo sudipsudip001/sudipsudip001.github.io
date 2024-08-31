@@ -7,10 +7,12 @@ import Resume from './Resume.js';
 import Blogs from './Blogs.js';
 import Socials from './Socials.js';
 import Footer from './Footer.js';
+import Education from './Education.js';
 
 export default function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const educationRef = useRef(null);
   const skillsRef = useRef(null);
   const resumeRef = useRef(null);
   const blogsRef = useRef(null);
@@ -26,6 +28,7 @@ export default function App() {
         scrollToSection={scrollToSection}
         aboutRef={aboutRef}
         projectsRef={projectsRef}
+        educationRef={educationRef}
         skillsRef={skillsRef}
         resumeRef={resumeRef}
         blogsRef={blogsRef}
@@ -33,6 +36,7 @@ export default function App() {
       />
       <div ref={aboutRef}><About /></div>
       <div ref={projectsRef}><Projects /></div>
+      <div ref={educationRef}><Education /></div>
       <div ref={skillsRef}><Skills /></div>
       <div ref={resumeRef}><Resume /></div>
       <div ref={blogsRef}><Blogs /></div>

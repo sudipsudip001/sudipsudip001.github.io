@@ -4,15 +4,16 @@ import styles from './Skills.module.css';
 export default function Skills(){
     return(
         <>
-            <h2 className={styles.text}>Skills:</h2>
+            <h2 className={styles.text}>Tech stack:</h2>
             <div className={styles.skills}>
-                <HTML5Icon className={styles.html} />
-                <JavaScriptIcon className={styles.js} />
-                <CSS3Icon className={styles.css} />
-                <ReactIcon className={styles.react} />
+                <img src="./images/c.png" alt="C programming logo" className={styles.C} />
                 <PythonIcon className={styles.python} />
                 <FlaskIcon className={styles.flask} />
                 <PyTorchIcon className={styles.pytorch} />
+                <HTML5Icon className={styles.html} />
+                <CSS3Icon className={styles.css} />
+                <JavaScriptIcon className={styles.js} />
+                <ReactIcon className={styles.react} />
             </div>
         </>
     )

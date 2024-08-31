@@ -4,3 +4,14 @@
     justify-content: center;
     padding: 50px;
 }
+
+@keyframes pulse{
+    0% { transform: scale(0.6); opacity: 0.6;}
+    50% { transform: scale(1.1); opacity: 1;}
+    100% { transform: scale(0.6); opacity: 0.6;}
+}
+
+.animate{
+    /* display: inline-block; */
+    animation: pulse 1.5s ease-in-out infinite;
+}

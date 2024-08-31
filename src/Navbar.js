@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Navbar.module.css";
 
-export default function Navbar({ scrollToSection, aboutRef, projectsRef, skillsRef, resumeRef, blogsRef, socialsRef }) {
+export default function Navbar({ scrollToSection, aboutRef, projectsRef, educationRef, skillsRef, resumeRef, blogsRef, socialsRef }) {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logoContainer}>
@@ -10,6 +10,7 @@ export default function Navbar({ scrollToSection, aboutRef, projectsRef, skillsR
             <div className={styles['nav-links']}>
                 <button onClick={() => scrollToSection(aboutRef)} className={styles.link}>About</button>
                 <button onClick={() => scrollToSection(projectsRef)} className={styles.link}>Projects</button>
+                <button onClick={() => scrollToSection(educationRef)} className={styles.link}>Education</button>
                 <button onClick={() => scrollToSection(skillsRef)} className={styles.link}>Skills</button>
                 <button onClick={() => scrollToSection(resumeRef)} className={styles.link}>Resume</button>
                 <button onClick={() => scrollToSection(blogsRef)} className={styles.link}>Blogs</button>
