@@ -1,0 +1,62 @@
+.name{
+    padding: 30px;
+}
+.darkOuterDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+.outerDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.darkerElement{
+    border: 1px solid #333;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 25vw;
+    border-radius: 10px;
+    transition: background-color 1s;
+}
+.darkerElement:hover{
+    background-color: #494848;
+}
+.element{
+    border: 1px solid #333;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 25vw;
+    border-radius: 10px;
+    transition: background-color 1s;
+}
+.darkProjectList{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projectList{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.element:hover{
+    background-color: #e0e0e0;
+}

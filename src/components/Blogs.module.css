@@ -1,0 +1,10 @@
+.blogger{
+    padding: 30px;
+}
+.header{
+    display: flex;
+}
+.text{
+    display: flex;
+    flex-direction: row;
+}
