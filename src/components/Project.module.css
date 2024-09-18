@@ -1,62 +1,39 @@
 .name{
-    padding: 30px;
+    margin-left: 20vw;
 }
-.darkOuterDiv{
+.outerDiv, .darkOuterDiv{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     gap: 20px;
-    color: white;
+    max-width: 80vw;
 }
-.outerDiv{
+.darkerElement, .element{
+    border: 1px solid #333;
+    text-decoration: none;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-}
-.darkerElement{
-    border: 1px solid #333;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 30px;
     width: 25vw;
+    height: 15vh;
     border-radius: 10px;
-    transition: background-color 1s;
+    margin-left: 20vw;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }
-.darkerElement:hover{
-    background-color: #494848;
+.darkerElement:hover, .element:hover{
+    opacity: 0.4;
 }
-.element{
-    border: 1px solid #333;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    width: 25vw;
-    border-radius: 10px;
-    transition: background-color 1s;
-}
-.darkProjectList{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.projectList{
+.projectList, .darkProjectList{
     color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
-.element:hover{
-    background-color: #e0e0e0;
+.darkProjectList{
+    color: white;
 }

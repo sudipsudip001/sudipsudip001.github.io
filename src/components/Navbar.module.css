@@ -1,79 +1,44 @@
 .navbar{
+    width: 60vw;
     display: flex;
-    align-items: center;
-    height: 10vh;
-}
-.logoContainer{
-    margin-right: 20px;
-    margin-top: 95px;
+    margin-left: 20vw;
 }
 .image{
-    max-height: 20vh;
-    width: auto;
+    width: 120px;
+    height: 120px;
 }
-.nav-darkLink{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    flex-grow: 1;
+.imageDark{
+    width: 170px;
+    height: 120px;
 }
-.nav-links{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    flex-grow: 1;
+button{
+    width: 90px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+button:hover{
+    opacity: 0.4;
 }
 .nav-darkLink button{
-    text-decoration: none;
-    border: 0;
     background-color: black;
     color: white;
-    border-radius: 5px;
-    height: 45px;
-    width: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
 }
 .nav-links button{
-    text-decoration: none;
-    border: 0;
     background-color: white;
     color: black;
-    border-radius: 5px;
-    height: 45px;
+}
+.bulbOn, .bulbOff{
     width: 90px;
+    object-fit: cover;
+}
+.nav-links, .nav-darkLink{
     display: flex;
+    width: 60vw;
+    justify-content: end;
     align-items: center;
-    justify-content: center;
-    font-size: large;
 }
-.nav-darkLink button:hover{
-    background-color: #353434;
-    padding: 5px;
-    transition: 0.5s;
-}
-.nav-links button:hover{
-    background-color: #f3eeee;
-    padding: 5px;
-    transition: 0.5s;
-}
-.bulbOn{
-    height: 90px;
-    width: 120px;
-}
-.bulbOff{
-    height: 90px;
-    width: 120px;
-}
-.bulbOn:hover{
-    background-color: white;
-}
-.bulbOff:hover{
-    background-color: black;
+.skill, .blog, .social{
+    width: 70px;
 }

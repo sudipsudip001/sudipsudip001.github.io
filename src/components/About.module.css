@@ -1,25 +1,20 @@
 .head{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 80px;
- }
-.intro{
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    max-width: 60vw;
+    margin-left: 20vw;
+}
+.intro{
     opacity: 1;
-    transition: opacity 4s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 .fadeIn{
     opacity: 1;
 }
 .fadeOut{
     opacity: 0;
-}
-.more{
-    display: flex;
-    width: 80vw;
-    text-align: center;
 }
