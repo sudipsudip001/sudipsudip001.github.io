@@ -3,12 +3,13 @@
 }
 .socials {
     padding: 30px;
-    max-width: 60vw;
-    margin-left: 16vw;
+    max-width: 56vw;
+    margin-left: 20vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.darkLink, .link{
+.firstLink, .secondLink, .thirdLink,
+.firstDarkLink, .secondDarkLink, .thirdDarkLink{
     position: relative;
     display: flex;
     align-items: center;
@@ -16,23 +17,68 @@
     width: 120px;
     height: 120px;
     border-radius: 30%;
-    opacity: 1;
+    opacity: 0.5;
     transition: opacity 0.4s ease-in-out;
 }
-.darkLink:hover, .link:hover{
-    opacity: 0.5;
-}
-.darkLink::before, .link::before{
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 10px;
-    transition: background-color 0.2s ease;
-    z-index: -1;
+.firstLink:hover, .secondLink:hover, .thirdLink:hover,
+.firstDarkLink:hover, .secondDarkLink:hover, .thirdDarkLink:hover{
+    opacity: 1;
 }
 .githubLight{
     height: 90px;
+}
+.firstLink, .firstDarkLink,
+.secondLink, .secondDarkLink,
+.thirdLink, .thirdDarkLink{
+    position: relative;
+}
+.xtitle,
+.gitTitle,
+.linked{
+    position: absolute;
+    top: -10px;
+    right: -35px;
+    background-color: rgb(240, 240, 240);
+    color: black;
+    padding: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+    visibility: hidden;
+    transition: visibility 0.5s ease-in;
+}
+.xtitle, .linked{
+    right: -45px;
+}
+.firstLink:hover .xtitle,
+.firstDarkLink:hover .xtitle,
+.secondLink:hover .gitTitle,
+.secondDarkLink:hover .gitTitle,
+.thirdLink:hover .linked,
+.thirdDarkLink:hover .linked{
+    visibility: visible;
+}
+@media (max-width: 430px) {
+    .text{
+        margin-left: 5vw;
+    }
+    .socials{
+        margin: 0;
+        padding: 0;
+        height: 5vh;
+        width: 60vw;
+        margin-left: 15vw;
+        max-width: 100vw;
+        margin-bottom: 10px;
+    }
+    .firstLink, .secondLink, .thirdLink,
+    .firstDarkLink, .secondDarkLink, .thirdDarkLink{
+        opacity: 1;
+        height: 5vh
+    }
+    .lightTwitter, .lightGithub, .lightLinked,
+    .xerr, .githubLight, .lightLinked{
+        height: 40px;
+        width: 40px;
+    }
 }

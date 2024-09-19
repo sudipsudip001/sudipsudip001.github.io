@@ -6,24 +6,27 @@
             <>
                 <h2 className={styles.text}>Social handles:</h2>
                 <div className={styles.socials}>
-                    <span className={darkMode? styles.darkLink: styles.link}>
+                    <span className={darkMode? styles.firstDarkLink: styles.firstLink}>
                         <a href="https://x.com/sudipsudip001" >
                             {darkMode? 
-                                <XDarkIcon />
-                            : <XLightIcon />}
+                                <XDarkIcon className={styles.xerr} />
+                            : <XLightIcon className={styles.lightTwitter} />}
                         </a>
+                        <div className={styles.xtitle}>Twitter</div>
                     </span>
-                    <span className={darkMode? styles.darkLink: styles.link}>
+                    <span className={darkMode? styles.secondDarkLink: styles.secondLink}>
                         <a href="https://github.com/sudipsudip001" >
                             {darkMode ? 
                                 <img src="./images/github_light.png" alt="light image github" className={styles.githubLight} />
-                            : <GitHubIcon />}
+                                : <GitHubIcon className={styles.lightGithub} />}
                         </a>
+                        <div className={styles.gitTitle}>GitHub</div>
                     </span>
-                    <span className={darkMode? styles.darkLink: styles.link}>
+                    <span className={darkMode? styles.thirdDarkLink: styles.thirdLink}>
                         <a href="https://www.linkedin.com/in/sudip-shrestha-61b7091aa/" >
-                            <LinkedInIcon />
+                            <LinkedInIcon className={styles.lightLinked} />
                         </a>
+                        <div className={styles.linked}>LinkedIn</div>
                     </span>
                 </div>
             </>

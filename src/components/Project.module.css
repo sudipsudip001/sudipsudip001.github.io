@@ -18,12 +18,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    width: 25vw;
-    height: 15vh;
     border-radius: 10px;
     margin-left: 20vw;
     opacity: 1;
     transition: opacity 0.4s ease-in-out;
+    text-align: center;
 }
 .darkerElement:hover, .element:hover{
     opacity: 0.4;
@@ -36,4 +35,26 @@
 }
 .darkProjectList{
     color: white;
+}
+.projectDescription{
+    width: 20vw;
+}
+@media (max-width: 430px) {
+    .name{
+        margin-left: 5vw;
+        overflow-x: hidden;
+    }
+    .outerDiv, .darkOuterDiv{
+        gap: 20px;
+        max-width: 95vw;
+    }
+    .element, .darkerElement{
+        margin-left: 5vw;
+    }
+    .projectDescription{
+        width: 40vw;
+    }
+    .element:hover, .darkerElement:hover{
+        opacity: 1;
+    }
 }

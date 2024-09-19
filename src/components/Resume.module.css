@@ -15,3 +15,12 @@
 .linkText:hover{
     opacity: 0.5;
 }
+@media (max-width: 430px) {
+    .linkText{
+        padding: 9px;
+        overflow-x: hidden;
+    }
+    .linkText:hover{
+        opacity: 1;
+    }
+}

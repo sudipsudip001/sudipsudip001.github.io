@@ -18,3 +18,11 @@
 .fadeOut{
     opacity: 0;
 }
+@media (max-width: 430px) {
+    .head{
+        max-width: 90vw;
+        margin-left: 5vw;
+        margin-top: 1vh;
+        overflow-x: hidden;
+    }
+}

@@ -8,3 +8,9 @@
     display: flex;
     flex-direction: row;
 }
+@media (max-width: 430px) {
+    .blogger{
+        margin-left: 5vw;
+        overflow-x: hidden;
+    }
+}

@@ -14,8 +14,8 @@ export default function Projects({ darkMode }){
                 {projects.map(project=>
                     <a href={project.link} className={darkMode? styles.darkerElement: styles.element}>
                         <div className={darkMode? styles.darkProjectList : styles.projectList} key={project.id}>
-                                <h3>{project.name}</h3>
-                                <p>{project.description}</p>
+                                <h3 className={styles.projectName}>{project.name}</h3>
+                                <p className={styles.projectDescription}>{project.description}</p>
                         </div>
                     </a>
                 )}

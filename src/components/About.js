@@ -31,7 +31,7 @@ export default function About(){
                         I like bringing imaginations to life from my work and being in the intersection of
                         technology and humanity. I love what I do and that includes mostly everything
                         thats possible to do using computers. Web development, game development, app development, embedded programming, ... 
-                        you name it. I aim to become one of the greatest programmers ever.
+                        you name it. I aim to become a great programmer.
                     </p>
                 </div>
             </div>

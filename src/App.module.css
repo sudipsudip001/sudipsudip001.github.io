@@ -11,3 +11,8 @@
     background-color: black;
     color: black;
 }
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Gowun Batang', sans-serif;
+}

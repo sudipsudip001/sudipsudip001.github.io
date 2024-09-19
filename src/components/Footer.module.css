@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     padding: 50px;
+    margin-left: 20px;
 }
 
 @keyframes pulse{
@@ -14,4 +15,10 @@
 .animate{
     /* display: inline-block; */
     animation: pulse 1.5s ease-in-out infinite;
+}
+@media (max-width: 430px) {
+    .creator{
+        padding-top: 3px;
+        margin: 0;
+    }
 }
