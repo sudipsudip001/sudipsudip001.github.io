@@ -11,6 +11,8 @@ import Education from './components/Education.js';
 import styles from './App.module.css';
 
 export default function App() {
+  const [showIntro, setShowIntro] = useState(true);
+  const [isIntroFading, setIsIntroFading] = useState(false);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const educationRef = useRef(null);
@@ -20,35 +22,49 @@ export default function App() {
   const socialsRef = useRef(null);
   const [darkMode, setDarkMode] = useState(false);
 
-  // const toggleTheme = () => {
-  //   setDarkMode(!darkMode);
-  // };
-
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
-
+  
+  const handleIntroClick = () => {
+    setIsIntroFading(true);
+    setTimeout(() => {
+      setShowIntro(false);
+    }, 1500);
+  }
   return (
-    <div className={darkMode? styles.dark: styles.light}>
-      <Navbar 
-        scrollToSection={scrollToSection}
-        projectsRef={projectsRef}
-        educationRef={educationRef}
-        skillsRef={skillsRef}
-        blogsRef={blogsRef}
-        socialsRef={socialsRef}
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-      />
-      {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
-      <div ref={aboutRef}><About darkMode={darkMode} /></div>
-      <div ref={projectsRef}><Projects darkMode={darkMode} /></div>
-      <div ref={educationRef}><Education darkMode={darkMode} /></div>
-      <div ref={skillsRef}><Skills darkMode={darkMode} /></div>
-      <div ref={resumeRef}><Resume darkMode={darkMode} /></div>
-      <div ref={blogsRef}><Blogs darkMode={darkMode} /></div>
-      <div ref={socialsRef}><Socials darkMode={darkMode} /></div>
-      <Footer />
-    </div>
+    <>
+      {showIntro ? (
+        <div className={`${styles.intro} ${isIntroFading ? styles.hidden: ''}`} onClick={handleIntroClick}>
+          <svg className={styles.responsiveSvg} viewBox="0 0 100 200" preserveAspectRatio="xMidYMid meet">
+            <text x="60" y="120" textAnchor="middle" dominantBaseline="middle" className={`${styles.text} ${styles.textBody}`}>
+              Sudip Shrestha
+            </text>
+          </svg>
+          Click to continue
+        </div>
+      ) : (
+        <div className={darkMode? styles.dark: styles.light}>
+          <Navbar 
+            scrollToSection={scrollToSection}
+            projectsRef={projectsRef}
+            educationRef={educationRef}
+            skillsRef={skillsRef}
+            blogsRef={blogsRef}
+            socialsRef={socialsRef}
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+          />
+          <div ref={aboutRef}><About darkMode={darkMode} /></div>
+          <div ref={projectsRef}><Projects darkMode={darkMode} /></div>
+          <div ref={educationRef}><Education darkMode={darkMode} /></div>
+          <div ref={skillsRef}><Skills darkMode={darkMode} /></div>
+          <div ref={resumeRef}><Resume darkMode={darkMode} /></div>
+          <div ref={blogsRef}><Blogs darkMode={darkMode} /></div>
+          <div ref={socialsRef}><Socials darkMode={darkMode} /></div>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }

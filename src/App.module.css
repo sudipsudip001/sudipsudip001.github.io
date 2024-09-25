@@ -2,7 +2,6 @@
     background-color: white;
     color: black;
 }
-
 .dark{
     background-color: black;
     color: white;
@@ -15,4 +14,57 @@ html, body{
     width: 100%;
     overflow-x: hidden;
     font-family: 'Gowun Batang', sans-serif;
+}
+.intro{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    background-color: #eeeded;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+.hidden{
+    opacity: 0.2;
+    pointer-events: none;
+}
+.responsiveSvg{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 1200px;
+}
+.text{
+    font-size: 30px;
+    stroke-width: 0.5;
+    letter-spacing: 3px;
+    fill: darkgrey;
+}
+.textBody{
+    animation: animate-stroke 6s;
+}
+@keyframes animate-stroke{
+    0%{
+        fill: transparent;
+        stroke: darkgrey;
+        stroke-width: lightgrey;
+        stroke-width: 5;
+        stroke-dashoffset: 30%;
+        stroke-dasharray: 0 45%;
+    }
+    50%{
+        fill: transparent;
+        stroke: lightgrey;
+        stroke-width: 1.5;
+    }
+    80%, 100%{
+        fill: darkgrey;
+        stroke: transparent;
+        stroke-width: 0;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 20% 0;
+    }
 }

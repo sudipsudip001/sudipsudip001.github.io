@@ -10,7 +10,7 @@ export default function Navbar({ scrollToSection, projectsRef, educationRef, ski
             <nav className={styles.navbar}>
                 <div>
                     {darkMode? 
-                        <img src="./images/night.png" alt='sleeping koala' className={styles.imageDark}/>
+                        <img src="./images/koala_night.png" alt='sleeping koala' className={styles.imageDark}/>
                     : <img src="./images/koala.png" alt='koala image' className={styles.image}/>}
                 </div>
                 <div className={darkMode? styles['nav-darkLink']: styles['nav-links']}>

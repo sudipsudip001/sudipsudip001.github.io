@@ -37,7 +37,7 @@
 .linked{
     position: absolute;
     top: -10px;
-    right: -35px;
+    right: -45px;
     background-color: rgb(240, 240, 240);
     color: black;
     padding: 2px;
@@ -45,10 +45,14 @@
     padding-right: 7px;
     border-radius: 5px;
     visibility: hidden;
-    transition: visibility 0.5s ease-in;
+    opacity: 0;
+    transition: visibility 0.4s ease-in-out, opacity .2s ease-in-out;
 }
-.xtitle, .linked{
+.xtitle{
     right: -45px;
+}
+.linked{
+    right: -52px;
 }
 .firstLink:hover .xtitle,
 .firstDarkLink:hover .xtitle,
@@ -56,6 +60,7 @@
 .secondDarkLink:hover .gitTitle,
 .thirdLink:hover .linked,
 .thirdDarkLink:hover .linked{
+    opacity: 1;
     visibility: visible;
 }
 @media (max-width: 430px) {
