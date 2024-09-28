@@ -9,15 +9,14 @@ import Socials from './components/Socials.js';
 import Footer from './components/Footer.js';
 import Education from './components/Education.js';
 import styles from './App.module.css';
+import ContactForm from './components/ContactForm.js';
 
 export default function App() {
   const [showIntro, setShowIntro] = useState(true);
   const [isIntroFading, setIsIntroFading] = useState(false);
-  const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const educationRef = useRef(null);
   const skillsRef = useRef(null);
-  const resumeRef = useRef(null);
   const blogsRef = useRef(null);
   const socialsRef = useRef(null);
   const [darkMode, setDarkMode] = useState(false);
@@ -55,13 +54,14 @@ export default function App() {
             darkMode={darkMode}
             setDarkMode={setDarkMode}
           />
-          <div ref={aboutRef}><About darkMode={darkMode} /></div>
+          <div><About darkMode={darkMode} /></div>
           <div ref={projectsRef}><Projects darkMode={darkMode} /></div>
           <div ref={educationRef}><Education darkMode={darkMode} /></div>
           <div ref={skillsRef}><Skills darkMode={darkMode} /></div>
-          <div ref={resumeRef}><Resume darkMode={darkMode} /></div>
+          <div><Resume darkMode={darkMode} /></div>
           <div ref={blogsRef}><Blogs darkMode={darkMode} /></div>
           <div ref={socialsRef}><Socials darkMode={darkMode} /></div>
+          <div><ContactForm darkMode={darkMode} /></div>
           <Footer />
         </div>
       )}

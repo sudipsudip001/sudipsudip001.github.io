@@ -8,6 +8,23 @@
     display: flex;
     flex-direction: row;
 }
+.text span{
+    animation: blink 1s infinite ease-in-out;
+}
+span:nth-child(1){
+    animation-delay: 0.1s;
+}
+span:nth-child(2){
+    animation-delay: 0.15s;
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    10%, 100%{
+        opacity: 1;
+    }
+}
 @media (max-width: 430px) {
     .blogger{
         margin-left: 5vw;
