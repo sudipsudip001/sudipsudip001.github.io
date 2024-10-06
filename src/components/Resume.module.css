@@ -21,6 +21,7 @@
     .linkText{
         padding: 9px;
         overflow-x: hidden;
+        text-align: center;
     }
     .linkText:hover{
         opacity: 1;

@@ -52,7 +52,7 @@
         margin-left: 5vw;
     }
     .projectDescription{
-        width: 40vw;
+        width: 60vw;
     }
     .element:hover, .darkerElement:hover{
         opacity: 1;

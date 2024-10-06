@@ -1,4 +1,4 @@
-    import { XLightIcon, XDarkIcon, GitHubIcon, LinkedInIcon } from "developer-icons";
+    import { XLightIcon, XDarkIcon, GitHubDarkIcon, GitHubLightIcon, LinkedInIcon } from "developer-icons";
     import styles from './Socials.module.css';
 
     export default function Socials({ darkMode }){
@@ -17,8 +17,8 @@
                     <span className={darkMode? styles.secondDarkLink: styles.secondLink}>
                         <a href="https://github.com/sudipsudip001" >
                             {darkMode ? 
-                                <img src="./images/github_light.png" alt="light image github" className={styles.githubLight} />
-                                : <GitHubIcon className={styles.lightGithub} />}
+                                <GitHubDarkIcon className={styles.githubLight} />
+                                : <GitHubLightIcon className={styles.lightGithub} />}
                         </a>
                         <div className={styles.gitTitle}>GitHub</div>
                     </span>

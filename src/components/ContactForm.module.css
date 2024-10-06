@@ -45,3 +45,11 @@
     color: white;
     border: 1px solid grey;
 }
+@media (max-width: 430px) {
+    .hello{
+        margin-left: 5vw;
+    }
+    .mail, .darkMail, .texty, .darkTexty{
+        width: 50vw;
+    }
+}
