@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Navbar from './components/Navbar.js';
-import About from './components/About.js';
-import Projects from './components/Projects.js';
-import Skills from './components/Skills.js';
-import Resume from './components/Resume.js';
-import Blogs from './components/Blogs.js';
-import Socials from './components/Socials.js';
-import Footer from './components/Footer.js';
-import Education from './components/Education.js';
-import styles from './App.module.css';
-import ContactForm from './components/ContactForm.js';
+import React, { useEffect, useRef, useState } from "react";
+import Navbar from "./components/Navbar.js";
+import About from "./components/About.js";
+import Projects from "./components/Projects.js";
+import Skills from "./components/Skills.js";
+import Resume from "./components/Resume.js";
+import Blogs from "./components/Blogs.js";
+import Socials from "./components/Socials.js";
+import Footer from "./components/Footer.js";
+import Education from "./components/Education.js";
+import styles from "./App.module.css";
+import ContactForm from "./components/ContactForm.js";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -23,7 +23,7 @@ const App = () => {
   const [now, setNow] = useState(false);
 
   const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -43,24 +43,35 @@ const App = () => {
   return (
     <div className={darkMode ? styles.dark : styles.light}>
       {shouldRender && (
-        <div 
-          className={`${styles.intro} ${isVisible ? '' : styles.introHide}`}
-          onClick={hide} style={{
-            position: 'fixed',
+        <div
+          className={`${styles.intro} ${isVisible ? "" : styles.introHide}`}
+          onClick={hide}
+          style={{
+            position: "fixed",
             top: 0,
             left: 0,
-            width: '100vw',
-            height: '100vh',
+            width: "100vw",
+            height: "100vh",
             zIndex: 1000,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: darkMode ? '#1a1a1a' : '#ffffff',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: darkMode ? "#1a1a1a" : "#ffffff",
           }}
         >
-          <svg className={styles.responsiveSvg} viewBox="0 0 100 200" preserveAspectRatio="xMidYMid meet">
-            <text x="50" y="100" textAnchor="middle" dominantBaseline="middle" className={`${styles.text} ${styles.textBody}`}>
+          <svg
+            className={styles.responsiveSvg}
+            viewBox="0 0 100 200"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50"
+              y="100"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              className={`${styles.text} ${styles.textBody}`}
+            >
               Sudip Shrestha
             </text>
           </svg>
@@ -69,7 +80,7 @@ const App = () => {
       )}
       {!isVisible && (
         <>
-          <Navbar 
+          <Navbar
             scrollToSection={scrollToSection}
             projectsRef={projectsRef}
             educationRef={educationRef}
@@ -80,12 +91,22 @@ const App = () => {
             setDarkMode={setDarkMode}
           />
           <About now={now} darkMode={darkMode} />
-          <div ref={projectsRef}><Projects darkMode={darkMode} /></div>
-          <div ref={educationRef}><Education darkMode={darkMode} /></div>
-          <div ref={skillsRef}><Skills darkMode={darkMode} /></div>
+          <div ref={projectsRef}>
+            <Projects darkMode={darkMode} />
+          </div>
+          <div ref={educationRef}>
+            <Education darkMode={darkMode} />
+          </div>
+          <div ref={skillsRef}>
+            <Skills darkMode={darkMode} />
+          </div>
           <Resume darkMode={darkMode} />
-          <div ref={blogsRef}><Blogs darkMode={darkMode} /></div>
-          <div ref={socialsRef}><Socials darkMode={darkMode} /></div>
+          <div ref={blogsRef}>
+            <Blogs darkMode={darkMode} />
+          </div>
+          <div ref={socialsRef}>
+            <Socials darkMode={darkMode} />
+          </div>
           <ContactForm darkMode={darkMode} />
           <Footer />
         </>
