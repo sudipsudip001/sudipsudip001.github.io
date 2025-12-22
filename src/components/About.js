@@ -24,16 +24,16 @@ export default function About({ now, darkMode }){
                 {!deleteView && 
                     <div className={`${darkMode? styles.darkIntro: styles.intro} ${showIntro ? styles.fadeIn : styles.fadeOut}`}>
                         <h1>Hi!!</h1>
-                        <p>My name is <b>Sudip Shrestha.</b></p>
-                        <p>I'm a Developer from <strong>Kathmandu, Nepal.</strong></p>
+                        <p>I am <b>Sudip Shrestha.</b></p>
+                        <p>a Developer from <strong>Kathmandu, Nepal.</strong></p>
                     </div>
                 }
                 <div className={styles.more}>
-                    <p>My primary interest lies in Artificial Intelligence specially Deep Learning.
-                        I like bringing imaginations to life from my work and being in the intersection of
-                        technology and humanity. I love what I do and that includes mostly everything
-                        thats possible to do using computers. Web development, game development, app development, embedded programming, ... 
-                        you name it. I aim to become a great programmer.
+                    <p>
+                        I could consider myself curious and invested in the field of AI, especially Deep Learning.
+                        Something about it, I find fascinating. Besides that the whole Computer Science domain is
+                        in itself a beauty and I consider myself a romantic, cause I like the purity and aesthetics of
+                        it, if you know what I mean.
                     </p>
                 </div>
             </div>

@@ -8,6 +8,20 @@
     display: flex;
     justify-content: space-between;
 }
+.x,
+.github,
+.linkedIn{
+    width: 50px;
+    height: 50px;
+    color: black;
+}
+.xDark,
+.githubDark,
+.linkedInDark{
+    width: 50px;
+    height: 50px;
+    color: white;
+}
 .firstLink, .secondLink, .thirdLink,
 .firstDarkLink, .secondDarkLink, .thirdDarkLink{
     position: relative;
@@ -32,19 +46,32 @@
 .gitTitle,
 .linked{
     position: absolute;
-    bottom: -25px;
+    bottom: -10px;
     right: 0;
     left: 0;
+    /* width: 80px; */
     text-align: center;
     background-color: rgb(240, 240, 240);
     color: black;
-    padding: 2px;
+    padding: 3px;
     padding-left: 7px;
     padding-right: 7px;
     border-radius: 5px;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.4s ease-in-out, opacity .2s ease-in-out;
+}
+.xtitle{
+    width: 15px;
+    left: 10px;
+}
+.gitTitle{
+    width: 50px;
+    left: -5px;
+}
+.linked{
+    width: 60px;
+    left: -11px;
 }
 .firstLink:hover .xtitle,
 .firstDarkLink:hover .xtitle,
@@ -73,8 +100,7 @@
         opacity: 1;
         height: 5vh
     }
-    .lightTwitter, .lightGithub, .lightLinked,
-    .xerr, .githubLight, .lightLinked{
+    .x, .linkedIn, .github{
         height: 40px;
         width: 40px;
     }

@@ -20,7 +20,11 @@ button{
     font-size: large;
     font-weight: bold;
 }
-button:hover{
+.project:hover,
+.education:hover,
+.skill:hover,
+.blog:hover,
+.social:hover{
     opacity: 0.4;
 }
 .nav-darkLink button{

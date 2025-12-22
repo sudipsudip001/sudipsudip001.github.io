@@ -1,4 +1,6 @@
-import { CIcon, HTML5Icon, JavaScriptIcon, CSS3Icon, ReactIcon, FlaskDarkIcon, FlaskLightIcon, PyTorchIcon, PythonIcon } from "developer-icons"
+import { SiFlask, SiPytorch, SiC, SiFastapi } from "react-icons/si";
+import { FaPython, FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
 import styles from './Skills.module.css';
 
 export default function Skills({ darkMode }){
@@ -6,16 +8,13 @@ export default function Skills({ darkMode }){
         <>
             <h2 className={styles.text}>Tech stack:</h2>
             <div className={styles.skills}>
-                <CIcon className={styles.C} />
-                <PythonIcon className={styles.python} />
-                {darkMode? 
-                    <FlaskDarkIcon className={styles.darkFlask} />
-                : <FlaskLightIcon className={styles.flask} />}
-                <PyTorchIcon className={styles.pytorch} />
-                <HTML5Icon className={styles.html} />
-                <CSS3Icon className={styles.css} />
-                <JavaScriptIcon className={styles.js} />
-                <ReactIcon className={styles.react} />
+                <SiC className={styles.C} title="C" />
+                <FaPython className={styles.python} title="Python" />
+                <SiFlask className={styles.flask} title="Flask" />
+                <SiFastapi className={styles.fastapi} title="FastAPI" />
+                <SiPytorch className={styles.pytorch} title="PyTorch" />
+                <IoLogoJavascript className={styles.js} title="JavaScript" />
+                <FaReact className={styles.react} title="React" />
             </div>
         </>
     )

@@ -8,7 +8,7 @@ export default function Projects({ darkMode }) {
       name: "plant disease detection FYP",
       link: "https://github.com/sudipsudip001/plant_disease_detection_FYP",
       description:
-        "A mobile application for platn disease detection as part of my final year project for Computer Science degree.",
+        "A mobile application for plant disease detection as part of my final year project for Computer Science degree.",
     },
     {
       id: 1,

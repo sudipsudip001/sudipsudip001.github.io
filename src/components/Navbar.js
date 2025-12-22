@@ -17,9 +17,9 @@ export default function Navbar({ scrollToSection, projectsRef, educationRef, ski
                     <button onClick={handleThemeToggle}>
                         <img src={darkMode? './images/bulbOff.png': "./images/bulb.png"} alt='bulb images' className={darkMode? styles.bulbOff: styles.bulbOn} />
                     </button>
-                    <button onClick={() => scrollToSection(projectsRef)}>Projects</button>
-                    <button onClick={() => scrollToSection(educationRef)}>Education</button>
-                        <button onClick={() => scrollToSection(skillsRef)} className={styles.skill}>Skills</button>
+                    <button className={styles.project} onClick={() => scrollToSection(projectsRef)}>Projects</button>
+                    <button className={styles.education} onClick={() => scrollToSection(educationRef)}>Education</button>
+                    <button onClick={() => scrollToSection(skillsRef)} className={styles.skill}>Skills</button>
                     <button onClick={() => scrollToSection(blogsRef)} className={styles.blog}>Blogs</button>
                     <button onClick={() => scrollToSection(socialsRef)} className={styles.social}>Socials</button>
                 </div>
