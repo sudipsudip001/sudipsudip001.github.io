@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Snowfall from 'react-snowfall';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const date = new Date();
+const month = date.getMonth()
+
+const winterMonths = [0, 1, 10, 11];
+const isWinter = winterMonths.includes(month)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {isWinter && (
+      <Snowfall
+        color='lightgrey'
+        snowflakeCount={200}style={{ position: 'fixed', width: '100vw', height: '100vh' }}
+      />
+    )}
     <App />
   </React.StrictMode>
 );

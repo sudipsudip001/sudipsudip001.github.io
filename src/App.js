@@ -12,7 +12,6 @@ import styles from "./App.module.css";
 import ContactForm from "./components/ContactForm.js";
 
 const App = () => {
-  const [isVisible, setIsVisible] = useState(true);
   const [shouldRender, setShouldRender] = useState(true);
   const projectsRef = useRef(null);
   const educationRef = useRef(null);
@@ -27,90 +26,48 @@ const App = () => {
   };
 
   useEffect(() => {
-    if (!isVisible) {
+    if (true) {
       const timer = setTimeout(() => {
         setShouldRender(false);
       }, 5000);
       setNow(true);
       return () => clearTimeout(timer);
     }
-  }, [isVisible]);
-
-  const hide = () => {
-    setIsVisible(false);
-  };
+  }, []);
 
   return (
     <div className={darkMode ? styles.dark : styles.light}>
-      {shouldRender && (
-        <div
-          className={`${styles.intro} ${isVisible ? "" : styles.introHide}`}
-          onClick={hide}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            zIndex: 1000,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: darkMode ? "#1a1a1a" : "#ffffff",
-          }}
-        >
-          <svg
-            className={styles.responsiveSvg}
-            viewBox="0 0 100 200"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <text
-              x="50"
-              y="100"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className={`${styles.text} ${styles.textBody}`}
-            >
-              Sudip Shrestha
-            </text>
-          </svg>
-          <div>Click to continue</div>
+      <>
+        <Navbar
+          scrollToSection={scrollToSection}
+          projectsRef={projectsRef}
+          educationRef={educationRef}
+          skillsRef={skillsRef}
+          blogsRef={blogsRef}
+          socialsRef={socialsRef}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+        <About now={now} darkMode={darkMode} />
+        <div ref={projectsRef}>
+          <Projects darkMode={darkMode} />
         </div>
-      )}
-      {!isVisible && (
-        <>
-          <Navbar
-            scrollToSection={scrollToSection}
-            projectsRef={projectsRef}
-            educationRef={educationRef}
-            skillsRef={skillsRef}
-            blogsRef={blogsRef}
-            socialsRef={socialsRef}
-            darkMode={darkMode}
-            setDarkMode={setDarkMode}
-          />
-          <About now={now} darkMode={darkMode} />
-          <div ref={projectsRef}>
-            <Projects darkMode={darkMode} />
-          </div>
-          <div ref={educationRef}>
-            <Education darkMode={darkMode} />
-          </div>
-          <div ref={skillsRef}>
-            <Skills darkMode={darkMode} />
-          </div>
-          <Resume darkMode={darkMode} />
-          <div ref={blogsRef}>
-            <Blogs darkMode={darkMode} />
-          </div>
-          <div ref={socialsRef}>
-            <Socials darkMode={darkMode} />
-          </div>
-          <ContactForm darkMode={darkMode} />
-          <Footer />
-        </>
-      )}
+        <div ref={educationRef}>
+          <Education darkMode={darkMode} />
+        </div>
+        <div ref={skillsRef}>
+          <Skills darkMode={darkMode} />
+        </div>
+        <Resume darkMode={darkMode} />
+        <div ref={blogsRef}>
+          <Blogs darkMode={darkMode} />
+        </div>
+        <div ref={socialsRef}>
+          <Socials darkMode={darkMode} />
+        </div>
+        <ContactForm darkMode={darkMode} />
+        <Footer />
+      </>
     </div>
   );
 };

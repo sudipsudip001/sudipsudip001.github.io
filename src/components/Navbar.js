@@ -8,11 +8,11 @@ export default function Navbar({ scrollToSection, projectsRef, educationRef, ski
     return (
         <>
             <nav className={styles.navbar}>
-                <div>
+                {/* <div>
                     {darkMode? 
                         <img src="./images/koala_night.png" alt='sleeping koala' className={styles.imageDark}/>
                     : <img src="./images/koala.png" alt='koala image' className={styles.image}/>}
-                </div>
+                </div> */}
                 <div className={darkMode? styles['nav-darkLink']: styles['nav-links']}>
                     <button onClick={handleThemeToggle}>
                         <img src={darkMode? './images/bulbOff.png': "./images/bulb.png"} alt='bulb images' className={darkMode? styles.bulbOff: styles.bulbOn} />

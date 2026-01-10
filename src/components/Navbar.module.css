@@ -1,7 +1,7 @@
 .navbar{
     width: 60vw;
     display: flex;
-    margin-left: 20vw;
+    /* margin-left: 20vw; */
 }
 .image{
     width: 120px;
