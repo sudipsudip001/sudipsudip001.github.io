@@ -12,7 +12,6 @@ import styles from "./App.module.css";
 import ContactForm from "./components/ContactForm.js";
 
 const App = () => {
-  const [shouldRender, setShouldRender] = useState(true);
   const projectsRef = useRef(null);
   const educationRef = useRef(null);
   const skillsRef = useRef(null);
@@ -28,7 +27,6 @@ const App = () => {
   useEffect(() => {
     if (true) {
       const timer = setTimeout(() => {
-        setShouldRender(false);
       }, 5000);
       setNow(true);
       return () => clearTimeout(timer);

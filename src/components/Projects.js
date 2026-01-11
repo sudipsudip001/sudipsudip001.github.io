@@ -1,8 +1,8 @@
-import { useState } from "react";
+
 import styles from "./Project.module.css";
 
 export default function Projects({ darkMode }) {
-  const [projects, setProjects] = useState([
+  const projects = [
     {
       id: 0,
       name: "plant disease detection FYP",
@@ -31,7 +31,7 @@ export default function Projects({ darkMode }) {
       description:
         "An automation bot written in Python that can automatically play the Classic dinosaur game using Template Matching.",
     },
-  ]);
+  ];
   return (
     <>
       <h2 className={styles.name}>Projects: </h2>
