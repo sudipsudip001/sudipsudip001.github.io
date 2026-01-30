@@ -10,7 +10,6 @@ export default function Skills({ darkMode }){
             <div className={styles.skills}>
                 <SiC className={styles.C} title="C" />
                 <FaPython className={styles.python} title="Python" />
-                <SiFlask className={styles.flask} title="Flask" />
                 <SiFastapi className={styles.fastapi} title="FastAPI" />
                 <SiPytorch className={styles.pytorch} title="PyTorch" />
                 <IoLogoJavascript className={styles.js} title="JavaScript" />

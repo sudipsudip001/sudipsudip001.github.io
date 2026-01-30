@@ -25,7 +25,7 @@ export default function About({ now, darkMode }){
                     <div className={`${darkMode? styles.darkIntro: styles.intro} ${showIntro ? styles.fadeIn : styles.fadeOut}`}>
                         <h1>Hi!!</h1>
                         <p>I am <b>Sudip Shrestha.</b></p>
-                        <p>a Developer from <strong>Kathmandu, Nepal.</strong></p>
+                        <p>as aspiring AI/Ml engineer from <strong>Kathmandu, Nepal.</strong></p>
                     </div>
                 }
                 <div className={styles.more}>

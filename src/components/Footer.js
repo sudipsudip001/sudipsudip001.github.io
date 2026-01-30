@@ -5,7 +5,7 @@ export default function Footer(){
         <div className={styles.creator}>
             <p>Made with &nbsp;</p>
             <span className={styles.animate}>❤️</span>
-            <p className='copyright'>&nbsp; by &copy; Sudip Shrestha, 2024</p>
+            <p className='copyright'>&nbsp; by &copy; Sudip Shrestha, 2026</p>
         </div>
     );
 }
