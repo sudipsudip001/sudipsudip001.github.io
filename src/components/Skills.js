@@ -1,4 +1,4 @@
-import { SiFlask, SiPytorch, SiC, SiFastapi } from "react-icons/si";
+import { SiPytorch, SiC, SiFastapi } from "react-icons/si";
 import { FaPython, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import styles from './Skills.module.css';
